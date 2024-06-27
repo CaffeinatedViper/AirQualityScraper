@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.Properties;
 
 public class AirQualityClient {
-    private String baseUrl;
-    private  String stationsEndpoint;
-    private  String installationsEndpoint;
+    private final String baseUrl;
+    private final String stationsEndpoint;
+    private final String installationsEndpoint;
 
     private final HttpClient httpClient;
 

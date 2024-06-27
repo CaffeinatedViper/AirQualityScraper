@@ -3,7 +3,10 @@ package org.airly;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
 import java.net.http.HttpClient;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,6 +19,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
         AirQualityClient client = new AirQualityClient(HttpClient.newHttpClient(),new ObjectMapper(), new ConfigLoader("config.properties"));
 
